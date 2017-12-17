@@ -96,7 +96,7 @@ names<-names[3:69]
 names(modelSumm)<-c("Subject","Activity",names)
 
 #Write table, not sure if this required for the assignment
-write.table(modelSumm,"tidyModelDataSummary.csv",row.names = FALSE)
+write.table(modelSumm,"tidyModelDataSummary.txt",row.names = FALSE)
 
 
 
