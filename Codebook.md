@@ -13,9 +13,9 @@ Ultimtely I did it in this order:
 
    * **Uses descriptive activity names to name the activities in the data set.** This was accomplished    iteratively using cbind for the data sets for activities and subjects. I made sure to add a column and heading name to these identifying what they are before the cbind.
    
-   * **Merge the training and the test sets to create one data set.** This was accomplished second to last, after getting the rest of the info into the two training and test datasets first, as below.
+   * **Merge the training and the test sets to create one data set.** This was accomplished second to last, after getting the rest of the info into the two training and test datasets first, as below. Since all the columns were the same, I used rbind to union the test and training sets.
    
-   * **Extracts only the measurements on the mean and standard deviation for each measurement.** For this I pulled the column names into a vector and used grepl to ferret out the ones that had the words mean or std in them. There were some stragglers of "meanFreq()" which I also removed.
+   * **Extracts only the measurements on the mean and standard deviation for each measurement.** For this I pulled the column names into a vector and used grepl to ferret out the ones that had the words mean or std in them. There were some stragglers of "meanFreq()" which I also removed. Then I subset the data based on the modified vector of column names.
 
 *Results*
 
