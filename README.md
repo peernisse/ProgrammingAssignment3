@@ -1,5 +1,5 @@
 # ProgrammingAssignment3
-## Coursera Module 3 Final Assignment
+### Coursera Module 3 Final Assignment
 
 # OBJECTIVES
 

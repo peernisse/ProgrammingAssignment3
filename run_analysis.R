@@ -1,12 +1,13 @@
-setwd("C:/Coursera/Repos/datasciencecoursera/3_Week_4_Ritems/Mod3_Wk4_Assignment")
-library(tidyverse)
 library(stringr)
+library(data.table)
+library(tidyverse)
+
 
 #GET DATA--------------------------------
-#Download and unzip the data
-fileUrl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(fileUrl,destfile = "rawData.zip")
-unzip("rawData.zip")
+#Download and unzip the data (just once)
+# fileUrl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+# download.file(fileUrl,destfile = "rawData.zip")
+# unzip("rawData.zip")
 
 
 #CREATE PRIMARY DATASET-------------------------------
@@ -85,7 +86,6 @@ rm(testSubj,trainSubj,xTest,xTrain,cols,colsMean,colsStd,filtCols,root,files,tes
 modelDataLong<-gather(modelDatanew,Parameter, Value,4:70)
 
 #Use dcast to make a pivot table with averages for each variable
-library(data.table)
 modelSumm<-dcast(modelDataLong,subject+activity ~ Parameter,fun=mean,value.var="Value") %>% 
         arrange(subject,activity)
 
