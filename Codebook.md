@@ -43,7 +43,7 @@ You can read this file into R via:
 
 reviewData<-read.csv("tidyModelDataSummary.csv")
 
-#VARIABLES USED
+# VARIABLES USED
 
 The final assignment product contains just the mean and standard deviation values for the varibles.
 
