@@ -95,9 +95,8 @@ names<-paste("Average of",names)
 names<-names[3:69]
 names(modelSumm)<-c("Subject","Activity",names)
 
-#Write tables, not sure if these are required for the assignment
-write.csv(modelDatanew,"tidyModelData_1.csv",row.names = FALSE)
-write.csv(modelSumm,"tidyModelData_2.csv",row.names = FALSE)
+#Write table, not sure if this required for the assignment
+write.table(modelSumm,"tidyModelDataSummary.csv",row.names = FALSE)
 
 
 
